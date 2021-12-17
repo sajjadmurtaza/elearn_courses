@@ -1,0 +1,26 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: elearn_courses_development
+  host: localhost
+  username: postgres
+  password: password
+
+
+production:
+  <<: *default
+  database: elearn_courses_production
+  username: postgres
+  password: password
+
+test:
+  <<: *default
+  database: elearn_courses_test
+  host: localhost
+  username: postgres
+  password: password
+
